@@ -68,7 +68,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Memento mori"
+sidebar-about-description: "Leave the beaten track occasionally and dive into the woods."
 sidebar-avatar: /img/self.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
