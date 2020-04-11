@@ -2,15 +2,13 @@
 layout:     post
 title:      "使用Matplotlib绘制时频谱"
 subtitle:   ""
-date:       2020-4-10
+date:       2020-4-3
 author:     "HieDean"
 header-img: "img/bg.jpg"
 tags:
     - 天大毕设
     - python
-    - Matplotlib
     - librosa
-    - stft
 ---
 
 ```python
