@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "pytorch中的tensorboardx安装及简单使用"
+subtitle:   ""
+date:       2020-3-30
+author:     "HieDean"
+header-img: "img/bg.jpg"
+tags:
+    - 天大毕设
+    - pytorch
+---
 ### 安装
 `pip install tensorflow`
 
