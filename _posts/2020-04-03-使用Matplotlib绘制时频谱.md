@@ -9,9 +9,11 @@ tags:
     - 天大毕设
     - python
     - Matplotlib
+    - librosa
+    - stft
 ---
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import librosa.core as lc
