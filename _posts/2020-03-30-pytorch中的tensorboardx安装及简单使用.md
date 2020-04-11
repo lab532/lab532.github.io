@@ -6,7 +6,7 @@
 据说tensorboardx是基于tensorflow的tensorboard的所以要先安装tensorflow
 
 ### 简单使用
-```
+```python
 from tensorboardX import SummaryWriter   
 writer = SummaryWriter()
 # ...
