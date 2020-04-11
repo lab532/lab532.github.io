@@ -1,4 +1,4 @@
----
+
 layout:     post
 title:      "Welcome to Hux Blog"
 subtitle:   " \"Hello World, Hello Blog\""
