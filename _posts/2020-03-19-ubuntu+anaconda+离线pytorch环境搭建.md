@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "conda基础操作及问题汇总"
+subtitle:   ""
+date:       2020-3-19
+author:     "HieDean"
+header-img: "img/7.jpg"
+tags:
+    - 天大毕设
+    - anaconda
+    - python
+---
+
 ### 官网下载anaconda
 ![](https://upload-images.jianshu.io/upload_images/8128430-9fc8ef01e04df77c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 得到

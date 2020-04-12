@@ -4,7 +4,7 @@ title:      "pytorch中的tensorboardx安装及简单使用"
 subtitle:   ""
 date:       2020-3-30
 author:     "HieDean"
-header-img: "img/bg.jpg"
+header-img: "img/9.jpg"
 tags:
     - 天大毕设
     - pytorch

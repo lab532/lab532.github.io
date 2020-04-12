@@ -4,7 +4,7 @@ title:      "python实现stft并绘制时频谱"
 subtitle:   ""
 date:       2020-1-18
 author:     "HieDean"
-header-img: "img/bg.jpg"
+header-img: "img/3.jpg"
 tags:
     - 天大毕设
     - python
