@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "conda基础操作及问题汇总"
+title:      "ubuntu+anaconda+离线pytorch环境搭建"
 subtitle:   ""
 date:       2020-3-19
 author:     "HieDean"
@@ -8,6 +8,7 @@ header-img: "img/7.jpg"
 tags:
     - 天大毕设
     - anaconda
+    - pytorch
     - python
 ---
 
