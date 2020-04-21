@@ -34,7 +34,7 @@ tags:
 基于model的方法又可以分为基于神经网络的方法和基于非负矩阵（NMF: non-negative factorization matrix）的方法。我在另一篇文章还看到过基于隐马尔科夫（HMM）的方法。（以上含有个人见解）
 
 
-语音的处理从空间上可以分为时域上的和时频域上的。这里所说的时频域是指对一段语音信号进行分帧，并对每一帧做fft得到的二维时频谱。
+语音的处理从空间上可以分为时域上的和时频域上的。这里所说的时频域是指对一段语音信号进行分帧，并对每一帧做fft得到的二维时频谱，这种方法叫做短时傅里叶变换（STFT），如果我们取STFT时频谱的幅度值，便得到了FFT-MAG，如果取复值，便得到了FFT-MASK。除了STFT，还有一种时频谱经常被使用，叫GF-POW（Gammatone Frequency Power Spectrum）。
 
 
 文章中还提到目标（target），也就是我们最终想要获得什么？一是获得一个mask，这是该文讨论的重点，二是获得一个频谱包络（spectral envelope）。
@@ -52,8 +52,8 @@ IBM:
 $$
 IBM(t,f)= \left\{
             \begin{aligned}
-            1 , if SNR(t,f) > LC \\
-            0 , otherwise.
+            1 \ , \ if SNR(t,f) > LC \\
+            0 \ , \ otherwise.
             \end{aligned}
             \right.
 $$
@@ -70,5 +70,14 @@ IRM(t,f)=(\frac{S^2(t,f)}{S^2(t,f)+N^2(t,f)})^{\beta}
 $$
 
 
+文章还简单介绍了一些关于语音信号的feature，比如AMS: amplitude modulation spectrogram、MFCC: mel-frequency cepstral coefficients、GF: 64-channels Gammatone filterbank power spectra
 
+
+文章还介绍了一种自回归滑动平均模型ARMA（atuo-regressive moving average filter），说这玩意儿可以提高低信噪比下语音分离的表现，我打算把它弄到Phasen里试试。
+
+
+ARMA:
+
+
+$$C\limits^{\^}(t)=\frac{C\limits^{\^}(t-m)+\cdots +C\limits^{\^}(t)+\cdots +C\limits^{\^}(t+m)}{2m+1}$$
 
