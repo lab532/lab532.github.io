@@ -40,4 +40,35 @@ tags:
 文章中还提到目标（target），也就是我们最终想要获得什么？一是获得一个mask，这是该文讨论的重点，二是获得一个频谱包络（spectral envelope）。
 
 
-什么是maske呢？mask主要用于时频域，如果带噪的语音的stft时频谱为$X$，干净的语音的时频谱为$Y$，mask为$M$，那么便有$Y=X \cdot M$。当然，mask也分很多种，最简单的是IBM（ideal binary mask），即
+什么是maske呢？mask主要用于时频域，如果带噪的语音的stft时频谱为$X$，干净的语音的时频谱为$Y$，mask为$M$，那么便有$Y=X \cdot M$，从此公式也可以看出，mask同带噪语音以及干净语音的时频谱的大小应该是一样的。
+
+
+当然，mask也分很多种，最简单的是IBM（ideal binary mask），即每个unit的值不是0就是1，这种最简单的mask把语音增强看作一个二值化问题，或者说二元分类问题：计算带噪时频谱的每一个单元的信噪比，通过比较该单元信噪比与 local criterion 的关系来决定该位置处的mask应为1或是0，这样的mask可以将时频谱中噪声主导的单元置为0，语音主导的单元保留，从而达到降噪的目的。有一种与IBM非常相似的叫TBM（Target Binary Mask），它与IBM的不同点在于信噪比的计算方式，TBM使用的噪声并非实际噪声，而是SSN: speech-shaped noise。
+
+
+IBM:
+
+
+$$
+IBM(t,f)= \left\{
+            \begin{aligned}
+            1 , if SNR(t,f) > LC \\
+            0 , otherwise.
+            \end{aligned}
+            \right.
+$$
+
+
+IBM的进化版IRM（ideal ratio mask），它与IBM的不同在于mask使用的概率，也就是说不论是语音主导的单元还是噪声主导的单元，mask对其的作用都是衰减或者增益，而不是绝对的保留或置0，用脚趾头也能想到这玩意儿的效果会比IBM好。
+
+
+IRM:
+
+
+$$
+IRM(t,f)=(\frac{S^2(t,f)}{S^2(t,f)+N^2(t,f)})^{\beta}
+$$
+
+
+
+
