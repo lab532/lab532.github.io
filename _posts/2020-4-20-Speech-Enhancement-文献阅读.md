@@ -8,18 +8,6 @@ header-img: "img/12.jpg"
 tags:
     - 天大毕设
 ---
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-
 
 ### On Training Targets for Supervised Speech Separation
 这篇文章让我大概了解了目前这个邻域的一些技术与做法。
