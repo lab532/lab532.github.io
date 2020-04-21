@@ -79,5 +79,4 @@ $$
 ARMA:
 
 
-$$C\limits^{\^}(t)=\frac{C\limits^{\^}(t-m)+\cdots +C\limits^{\^}(t)+\cdots +C\limits^{\^}(t+m)}{2m+1}$$
-
+$$\mathop{C}\limits ^{\wedge}(t)=\frac{\mathop{C}\limits ^{\wedge}(t-m)+\cdots +\mathop{C}(t)+\cdots +\mathop{C}(t+m)}{2m+1}$$
