@@ -79,3 +79,7 @@ ARMA:
 
 
 $$\hat{C}(t)=\frac{\hat{C}(t-m)+\cdots +\mathop{C}(t)+\cdots +\mathop{C}(t+m)}{2m+1}$$
+
+
+### Singing Voice Separation With Deep U-net Convolutional Networks
+这篇文章主要是用两个U-net，一个用于提取一首歌中的旋律，另一个用于提取伴奏，还是基于fft-mask的方法，挺好理解的。
