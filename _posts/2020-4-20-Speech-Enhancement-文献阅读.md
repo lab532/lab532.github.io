@@ -87,3 +87,18 @@ $$\hat{C}(t)=\frac{\hat{C}(t-m)+\cdots +\mathop{C}(t)+\cdots +\mathop{C}(t+m)}{2
 
 ### Binary and ratio time-frequency masks for robust speech recognition
 这篇文章看的很艰难，可能是我英文不够好，也可能是太瞌睡了
+
+从题目可以看出这篇文章主要是对比binary mask和ratio mask进行对比。这里又要区分一下ideal和estimated，即binary mask有ideal binary mask和estimated binary mask之分，ratio mask也有ideal ratio mask和estimated ratio mask之分。但我不太清楚ideal和estimated之间的本质区别在哪里，个人理解就是理想的mask是由最开始的一套固定的算法计算得出的，之后出现的其他的计算方法均称为estimated
+
+
+这里用其他方法估计mask：使用CASA（computational auditory scene analysis）估计IBM；使用一种和ITD（interaural time difference）、IID（interaural intensity difference）有关的信噪比计算IRM。得出的IBM和IRM分别送入数据缺失识别器和传统语音识别器。（CASA也与ITD和IID有关）
+
+
+传统的语音识别器：基于隐马尔科夫和梅尔倒谱系数的自动语音识别.
+
+
+数据缺失识别器（missing-data recognizer）：
+> This method is based on distinguishing between reliable and unreliable data When speech is contaminated by additive noise some time-frequency units contain predominantly speech energy (reliable) and the rest are dominated by noise energy. The missing-data method treats the latter T-F units as missing or unreliable during recognition. Missing T-F units are identified by thresholding the t-F units based on local SNR. 
+
+
+所以整个系统就是，单通道信号分别送入不同的HRTF（head-related transfer functions，头部相关传输函数，是一种音效定位算法）得到双耳信号（左耳信号和右耳信号），双耳信号经过stft后又经过两种不同的方法分别得出IBM和IRM，IBM送入数据缺失识别器，IRM送入传统语音识别器。
