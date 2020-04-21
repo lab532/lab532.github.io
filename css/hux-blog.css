@@ -93,6 +93,7 @@ a img:focus {
 }
 article {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 blockquote {
   color: #808080;
