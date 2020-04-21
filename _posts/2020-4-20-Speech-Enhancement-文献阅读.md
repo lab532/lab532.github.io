@@ -72,7 +72,7 @@ $$
 文章还简单介绍了一些关于语音信号的feature，比如AMS: amplitude modulation spectrogram、MFCC: mel-frequency cepstral coefficients、GF: 64-channels Gammatone filterbank power spectra
 
 
-文章还介绍了一种自回归滑动平均模型ARMA（atuo-regressive moving average filter），说这玩意儿可以提高低信噪比下语音分离的表现，我打算把它弄到Phasen里试试。
+文章还介绍了一种自回归滑动平均模型ARMA（atuo-regressive moving average filter），说这玩意儿可以提高低信噪比时语音分离的表现，我打算把它弄到Phasen里试试。
 
 
 ARMA:
