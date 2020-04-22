@@ -102,3 +102,10 @@ $$\hat{C}(t)=\frac{\hat{C}(t-m)+\cdots +\mathop{C}(t)+\cdots +\mathop{C}(t+m)}{2
 
 
 所以整个系统就是，单通道信号分别送入不同的HRTF（head-related transfer functions，头部相关传输函数，是一种音效定位算法）得到双耳信号（左耳信号和右耳信号），双耳信号经过stft后又经过两种不同的方法分别得出IBM和IRM，IBM送入数据缺失识别器，IRM送入传统语音识别器。
+
+
+### Complex Ratio Masking for Monaural Speech Separation
+其实看这篇文章之前已经大概知道它要干啥了，所以就不是很费劲。
+
+
+前面提到mask的发展从IBM到IRM，但是这些mask都是实数，它们仅能体现时频谱的幅度信息。但有研究发现，相位信息的重构对语音增强后的语音的听觉感受和可懂度都非常重要，所以作者就提出了使用DNN去估计cIRM，也就是mask的每一个单元都是一个复数，这就和phasen非常像了
