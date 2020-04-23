@@ -109,3 +109,22 @@ $$\hat{C}(t)=\frac{\hat{C}(t-m)+\cdots +\mathop{C}(t)+\cdots +\mathop{C}(t+m)}{2
 
 
 前面提到mask的发展从IBM到IRM，但是这些mask都是实数，它们仅能体现时频谱的幅度信息。但有研究发现，相位信息的重构对语音增强后的语音的听觉感受和可懂度都非常重要，所以作者就提出了使用DNN去估计cIRM，也就是mask的每一个单元都是一个复数，这就和phasen非常像了
+
+### Phasen-Sensitive and Recongnition-Boosted Speech Separation Using Deep Recurrent Neural Networks
+瞅瞅这题目，又是相位敏感、又是识别增强、又是语音分离、又是深度循环神经网络，这到底是个啥？
+
+
+前面已经说到mask发展到了cIRM，这篇文章也是提出使用复数域的mask，不过和cIRM不同，它的特色在于相位敏感（就是说新发明了一种mask的意思吧我猜）：
+
+
+$$a^{psf}=\frac{|s|}{|y|}cos(\theta)$$
+$$\theta = \theta ^s - \theta ^y$$
+
+
+这篇文章也提出了使用RNN来提取语音在时间前后上的相关性，并指出要长时间域，不能短时间域，且为了避免gradient vanish和gradient blows up，所以用了LSTM。
+
+
+这篇文章我觉得牛的一点是，作者认为语音识别和语音分离是一个先有鸡还是先有蛋的问题，语音识别的结果可以提升语音分离的表现能力，语音分离也可以提升语音识别的准确率。因此作者打算把二者结合起来设计一个多任务的前馈系统，既可以识别，也可以分离（虽然和GAN不一样，但这让我想起了GAN）。
+
+
+但这个系统结构是啥样的，作者没有附图，只是文字描述了一下，我没怎么读懂......
