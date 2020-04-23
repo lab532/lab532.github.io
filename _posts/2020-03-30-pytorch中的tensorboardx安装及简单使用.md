@@ -32,5 +32,20 @@ writer.add_graph(model, torch.rand(input.shape))
 
 在浏览器输入命令行出现的url即可
 
+
+### 如果tensorboard的log文件都在远程服务器上，如何在本地访问呢？
+首先，在ssh连接时建立ssh隧道，实现远程端口到本地端口的转发。
+``ssh -L 16006:127.0.0.1:6006 account@server.address``
+
+
+具体来说就是将远程服务器的6006端口（tensorboard默认将数据放在6006端口）转发到本地的16006端口，在本地对16006端口的访问即是对远程6006端口的访问，当然，转发到本地某一端口不是限定的，可自由选择。
+
+
+在远端服务器上开启tensorboard
+``tensorboard --logdir=runs``
+
+
+最后本地访问`http://127.0.0.1:16006/`
+
 官方文档
 [https://tensorboardx.readthedocs.io/en/latest/tutorial_zh.html](https://tensorboardx.readthedocs.io/en/latest/tutorial_zh.html)
