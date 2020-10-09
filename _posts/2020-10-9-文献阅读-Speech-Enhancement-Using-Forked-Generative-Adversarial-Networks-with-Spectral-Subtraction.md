@@ -2,7 +2,7 @@
 layout:     post
 title:      "文献阅读-Speech Enhancement Using Forked Generative Adversarial Networks with Spectral Subtraction "
 subtitle:   ""
-date:       2019-6-15
+date:       2020-10-9
 author:     "HieDean"
 header-img: "img/13.jpg"
 tags:
