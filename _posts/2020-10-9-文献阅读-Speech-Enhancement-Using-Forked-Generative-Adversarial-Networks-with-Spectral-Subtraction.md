@@ -23,7 +23,7 @@ tags:
 
 这篇文章提出的模型叫**S-ForkGAN**，该模型工作在log-power spectra上，模型结构如下图所示：
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-1.png)
+![](../img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-1.png)
 
 * 1帧语音波形经过512点FFT并被转换为257点log-power spectra
 
@@ -42,23 +42,23 @@ tags:
 
 算法流程如下：
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-2.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-2.png)
 
 其中$s$代表带噪谱，$\hat{s}$代表增强语音谱，$\tilde{s}$代表ground truth语音谱，$\hat{v}$代表增强噪声谱，$\tilde{v}$代表$s-\tilde{s}$，也就是ground truth噪声谱
 
 通过以上说明，基本就可以搞懂本篇文章的模型流程，下面看loss函数：
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-3.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-3.png)
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-4.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-4.png)
 
 其中G的损失函数中
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-5.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-5.png)
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-6.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-6.png)
 
-![](../img/文献阅读/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-7.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-7.png)
 
 可以看到GAN还是基于LSGAN和cGAN的
 
