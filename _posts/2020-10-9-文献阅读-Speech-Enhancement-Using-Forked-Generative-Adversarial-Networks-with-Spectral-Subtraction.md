@@ -23,7 +23,7 @@ tags:
 
 这篇文章提出的模型叫**S-ForkGAN**，该模型工作在log-power spectra上，模型结构如下图所示：
 
-![](../img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-1.png)
+![](/img/paperReading/Speech-Enhancement-Using-Forked-Generative-Adversarial-Networks-with-Spectral-Subtraction-1.png)
 
 * 1帧语音波形经过512点FFT并被转换为257点log-power spectra
 
