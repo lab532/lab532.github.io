@@ -13,7 +13,7 @@ tags:
 ---
 ### 音频处理库librosa的安装
 官方文档中给出了非常详细的安装方法
-[http://librosa.github.io/librosa/install.html](http://librosa.github.io/librosa/install.html)
+[https://librosa.org/](https://librosa.org/)
 
 ### librosa.core.stft的使用
 函数声明：
