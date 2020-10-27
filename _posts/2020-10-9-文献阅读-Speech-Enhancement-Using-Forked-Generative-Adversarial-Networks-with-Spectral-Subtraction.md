@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "文献阅读-Speech Enhancement Using Forked Generative Adversarial Networks with Spectral Subtraction "
+title:      "文献阅读: Speech Enhancement Using Forked Generative Adversarial Networks with Spectral Subtraction "
 subtitle:   ""
 date:       2020-10-9
 author:     "HieDean"
@@ -20,6 +20,7 @@ tags:
         });
     </script>
 </head>
+##### 理解
 
 这篇文章提出的模型叫**S-ForkGAN**，该模型工作在log-power spectra上，模型结构如下图所示：
 
@@ -63,3 +64,9 @@ tags:
 可以看到GAN还是基于LSGAN和cGAN的
 
 这篇文章的创新点在于，将传统的谱减法的思想引入神经网络来做语音增强，模型使用一个encoder生成的latent vector加以噪声再分别经过两个decoder生成clean speech prediction和noise prediction的谱，即提取噪声又提取语音，并通过loss函数约束模型，非常妙！
+
+##### 补充
+
+虽然这篇文章的创新点在于对噪声做出估计从而引入了谱减法的思想，但是其噪声估计的部分对语音信号的还原有没有作用呢？从图上看，当估计噪声的decoder所在的flow更新梯度时，其更新的是噪声decoder和encoder的梯度，对语音decoder的参数并无关系，所以引入噪声估计对语音估计这条flow的积极作用主要体现在对encoder的梯度更新上。除此之外，谱减法可以得到一个语音估计，语音decoder也可以得到一个语音估计，这两个语音估计也许可以有一些扩展工作？
+
+另外，这篇文章有一个不好的地方，就是文中没有讲清楚discriminator的结构、输入输出、工作机理，差评！！！

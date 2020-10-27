@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Speech Enhancement 文献阅读"
+title:      "文献阅读: Speech Enhancement"
 subtitle:   ""
 date:       2020-4-20
 author:     "HieDean"
